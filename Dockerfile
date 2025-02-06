@@ -1,7 +1,7 @@
 FROM golang:1.23 AS builder
 WORKDIR /app
 RUN apt-get update -qq && \
-	apt-get install --no-install-recommends -y build-essential pkg-config python-is-python3 upx
+	apt-get install --no-install-recommends -y build-essential pkg-config python-is-python3
 
 RUN curl -fsSL https://deb.nodesource.com/setup_current.x | bash - && \
 	apt-get install -y nodejs \
