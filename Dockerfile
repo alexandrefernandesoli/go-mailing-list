@@ -27,7 +27,7 @@ RUN npm ci
 RUN go version
 RUN go mod tidy
 COPY . .
-RUN make -f tiny-bundle.mk build
+RUN make build
 
 FROM scratch
 WORKDIR /app
